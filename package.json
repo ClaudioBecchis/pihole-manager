@@ -1,0 +1,27 @@
+{
+  "name": "pihole-manager",
+  "version": "1.0.0",
+  "description": "Pi-hole Desktop Manager - Monitor and manage Pi-hole servers",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win",
+    "pack": "electron-builder --dir"
+  },
+  "build": {
+    "appId": "com.pihole.manager",
+    "productName": "PiHole Manager",
+    "win": {
+      "target": "portable",
+      "icon": null,
+      "signAndEditExecutable": false
+    },
+    "files": [
+      "src/**/*"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  }
+}
